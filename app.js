@@ -25,7 +25,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 mongoose.connect(config.database);
 
 app.get('/', (req,res) => {
-    res.send("Invalid page e");
+    res.send("Invalid page aaaa");
 });
 app.use('/bucketlist',bucketlist);
 //Listen to port 3000
