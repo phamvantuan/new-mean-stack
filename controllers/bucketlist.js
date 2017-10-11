@@ -5,15 +5,13 @@ const bucketlist = require('../models/List');
 
 //GET HTTP method to /bucketlist
 router.get('/',(req,res) => {
-   
 	 bucketlist.getAllLists((err, lists)=> {
         if(err) {
             res.json({success:false, message: `Failed to load all lists. Error: ${err}`});
         }
         else {
             res.write(JSON.stringify({success: true, lists:lists},null,2));
-            res.end();  
-
+            res.end();
     }   
     });
    

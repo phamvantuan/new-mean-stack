@@ -21,7 +21,6 @@ app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-
 mongoose.connect(config.database);
 
 app.get('/', (req,res) => {
